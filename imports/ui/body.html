@@ -8,10 +8,6 @@
       </form>
     </header>
     <div id="backlog">
-      <div class="draggable drag-drop">
-        <p>I am draggable</p>
-        <button type="button" class="removebox close">x</button>
-      </div>
       {{#each boxes}}
         {{> box}}
       {{/each}}
@@ -67,10 +63,3 @@
     <!-- /Canvas -->
   </div>
 </body>
-
-<template name="box">
-  <div class="draggable drag-drop">
-    <p>{{text}}</p>
-    <button type="button" class="removebox close">x</button>
-  </div>
-</template>

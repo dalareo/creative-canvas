@@ -29,7 +29,3 @@ Template.body.events({
     target.text.value = '';
   },
 });
-
-$(document).on('click', '.removebox', function () {
-  $(this).parent().remove();
-});
