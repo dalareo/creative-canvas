@@ -3,9 +3,13 @@
     <header>
       <h1>Business Model Canvas</h1>
 
-      <form class="new-box">
-        <input name="text" type="text" placeholder="Add new boxes typing here + INTRO">
-      </form>
+      {{> loginButtons}}
+
+      {{#if currentUser}}
+        <form class="new-box">
+          <input name="text" type="text" placeholder="Add new boxes typing here + INTRO">
+        </form>
+      {{/if}}
     </header>
     <div id="backlog">
       {{#each boxes}}

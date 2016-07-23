@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
 import { Boxes } from '../api/boxes.js';
@@ -21,10 +22,7 @@ Template.body.events({
     const text = target.text.value;
 
     // Insert a box into the collection
-    Boxes.insert({
-      text,
-      createdAt: new Date(), // current time
-    });
+    Meteor.call('boxes.insert', text);
 
     // Clear form
     target.text.value = '';
