@@ -1,0 +1,73 @@
+<head>
+  <title>Business Model Canvas</title>
+</head>
+
+<body>
+
+  {{> main}}
+</body>
+
+<template name="main">
+  <div class="container" id="canvas">
+    <form method="post">
+      <input type="button" class="btn btn-default createBox" value="Create box">
+      <input id="text" type="text" class="form-control" placeholder="Text inside the box">
+    </form>
+    <div id="backlog">
+      <div class="draggable drag-drop">
+        <p>I am draggable</p>
+        <button type="button" class="removebox close">x</button>
+      </div>
+    </div>
+
+
+    <!-- Canvas -->
+    <table id="bizcanvas" cellspacing="0" border="1">
+      <!-- Upper part -->
+      <tr>
+        <td class="dropzone" colspan="2" rowspan="2">
+          <h4>Key Partners</h4>
+        </td>
+        <td class="dropzone" colspan="2">
+          <h4>Key Activities</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2" rowspan="2">
+          <h4>Value Proposition</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2">
+          <h4>Customer Relationship</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2" rowspan="2">
+          <h4>Customer Segments</h4>
+          <p>...</p>
+        </td>
+      </tr>
+
+      <!-- Lower part -->
+      <tr>
+        <td class="dropzone" colspan="2">
+          <h4>Key Resources</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2">
+          <h4>Channels</h4>
+          <p>...</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="dropzone" colspan="5">
+          <h4>Cost Structure</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="5">
+          <h4>Revenue Streams</h4>
+          <p>...</p>
+        </td>
+      </tr>
+    </table>
+    <!-- /Canvas -->
+  </div>
+</template>

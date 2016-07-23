@@ -1,0 +1,84 @@
+/* CSS declarations go here */
+H1 {font-weight: 900;}
+
+#bizcanvas {
+  border: 3px solid black;
+  width: 100%;
+}
+
+#bizcanvas td {
+  vertical-align: top;
+  height: 200px;
+  width: 200px;
+  padding: 6px;
+}
+
+
+#bizcanvas H4 {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+#bizcanvas H5 {
+  font-weight: 700;
+  font-size: 0.7em;
+}
+
+#bizcanvas p {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+#backlog {
+  height: 90px;
+}
+.dropzone {
+  background-color: #ccc;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  width: 200px;
+  padding: 2em 0.5em;
+  z-index: 9999;
+
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+
+.form-control {
+  width: 200px !important;
+}
+
+.removebox {
+  margin-top: 1px;
+  margin-right: 2px;
+  position:absolute;
+  top:0;
+  right:0;
+}
