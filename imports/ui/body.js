@@ -11,24 +11,23 @@ Template.body.helpers({
 });
 
 Template.body.events({
-  'click .createBox': function(){
-    var i=1;
-    mNewObj = document.createElement('div');
-    mNewObj.className = "draggable drag-drop";
-    mNewObj.id = "BOX" + i;
-    mNewObj.style.visibility="show";
-    mNewObj.innerText = document.getElementById("text").value;
-    var input = document.createElement("button");
-    input.type = "button";
-    input.className = "removebox close";
-    input.innerText = "x"
-    mNewObj.appendChild(input);
-    document.getElementById("backlog").appendChild(mNewObj);
-    //mNewObj.setAttribute("data-x", 0);
-    //mNewObj.setAttribute("data-y", 0);
-    document.getElementById("text").value = "";
-    i++;
-  }
+  'submit .new-box'(event) {
+    // Prevent default browser form submit
+    event.preventDefault()
+
+    // Get value from form element
+    const target = event.target;
+    const text = target.text.value;
+
+    // Insert a box into the collection
+    Boxes.insert({
+      text,
+      createdAt: new Date(), // current time
+    });
+
+    // Clear form
+    target.text.value = '';
+  },
 });
 
 $(document).on('click', '.removebox', function () {
