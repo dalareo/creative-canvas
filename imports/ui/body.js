@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 
 import { Boxes } from '../api/boxes.js';
 
+import './box.js';
 import './body.html';
 
 Template.body.helpers({
