@@ -23,6 +23,11 @@ Meteor.methods({
   'boxes.remove'(boxId) {
     check(boxId, String);
 
+    // Make sure the user is logged in before removing a box
+    if (! this.userId) {
+      throw new Meteor.Error('not-authorized');
+    }
+
     Boxes.remove(boxId);
   },
 });
