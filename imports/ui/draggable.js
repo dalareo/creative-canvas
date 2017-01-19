@@ -1,13 +1,16 @@
+import interact from 'interact.js';
+
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
     // enable inertial throwing
     inertia: true,
+
     // keep the element within the area of it's parent
     restrict: {
-      restriction: "#canvas",
+      restriction: "#bizcanvas",
       endOnly: true,
-      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
     },
     // enable autoScroll
     autoScroll: true,
@@ -61,8 +64,10 @@ interact('.draggable')
       // remove the drop feedback style
       event.target.classList.remove('drop-target');
       event.relatedTarget.classList.remove('can-drop');
+
     },
     ondrop: function (event) {
+
     },
     ondropdeactivate: function (event) {
       // remove active dropzone feedback
