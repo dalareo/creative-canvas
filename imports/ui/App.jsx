@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 import Dragula from 'react-dragula';
-
 import { Boxes } from '../api/boxes.js';
-
 import Box from './Box.jsx';
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
@@ -20,8 +18,9 @@ class App extends Component {
 
     // Find the text field via the React ref
     const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
+    const url = ReactDOM.findDOMNode(this.refs.urlInput).value.trim();
 
-    Meteor.call('boxes.insert', text);
+    Meteor.call('boxes.insert', text, url);
 
     // Clear form
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
@@ -70,15 +69,35 @@ class App extends Component {
 
           <AccountsUIWrapper />
 
-          <form
-            className="new-box"
-            onSubmit={this.handleSubmit.bind(this)} >
-            <input
-              type="text"
-              ref="textInput"
-              placeholder="Type to add new boxes"
-              />
-          </form>
+            <form
+              className="new-box"
+              onSubmit={this.handleSubmit.bind(this)} >
+              <p>
+                Create PAD:
+                <a
+                target="_blank" href="http://pad.educaas.io">New Pad</a>
+              </p>
+              <label>
+                Element Title:
+              </label>
+              <input
+                type="text"
+                ref="textInput"
+                placeholder="Add element title"
+                />
+              <label>
+                PAD url:
+              </label>
+              <input
+                type="url"
+                ref="urlInput"
+                placeholder="Add PAD url"
+                />
+              <input
+                type="submit"
+                value="Submit"
+                />
+            </form>
         </header>
         <p style={{display: 'none'}}></p>
         <div id="backlog" ref={this.dragulaDecorator}>
