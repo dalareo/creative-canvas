@@ -5,28 +5,10 @@ import { check } from 'meteor/check'
 export const Boxes = new Mongo.Collection('boxes');
 
 Meteor.methods({
-  'boxes.update'(boxId, dataX, dataY) {
-    check(boxId, String);
-    //check(text, Match.any());
-    check(dataX, String);
-    check(dataY, String);
-
-    // Make sure the user is logged in before moving a box
-    if (! this.userId) {
-      throw new Meteor.Error('not-authorized');
-    }
-
-    Boxes.update(boxId,{
-      //text,
-      dataX,
-      dataY,
-    });
-  },
-
   'boxes.insert'(text) {
     check(text, String);
 
-    // Make sure the user is logged in before inserting a task
+    // Make sure the user is logged in before inserting a box
     if (! this.userId) {
       throw new Meteor.Error('not-authorized');
     }
@@ -41,6 +23,7 @@ Meteor.methods({
   'boxes.remove'(boxId) {
     check(boxId, String);
 
+    const box = Boxes.findOne(boxId);
     // Make sure the user is logged in before removing a box
     if (! this.userId) {
       throw new Meteor.Error('not-authorized');

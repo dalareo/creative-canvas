@@ -1,58 +1,27 @@
 /* CSS declarations go here */
 H1 {font-weight: 900;}
 
+.row {
+  margin: 0 !important;
+}
+
 #bizcanvas {
-  border: 3px solid black;
   width: 100%;
+  background-color: #eee;
 }
-
-#bizcanvas td {
-  vertical-align: top;
-  height: 200px;
-  width: 200px;
-  padding: 6px;
-}
-
 
 #bizcanvas H4 {
   font-weight: 700;
   font-size: 1em;
 }
 
-#bizcanvas H5 {
-  font-weight: 700;
-  font-size: 0.7em;
-}
-
-#bizcanvas p {
-  font-weight: 300;
-  font-size: 0.8em;
-}
-
 #backlog {
   height: 90px;
-}
-.dropzone {
-  background-color: #ccc;
-  margin: 10px auto 30px;
-  padding: 10px;
-  width: 80%;
-  transition: background-color 0.3s;
-}
-
-.drop-active {
-  border-color: #aaa;
-}
-
-.drop-target {
-  background-color: #29e;
-  border-color: #fff;
-  border-style: solid;
 }
 
 .drag-drop {
   display: inline-block;
-  width: 200px;
+  width: 120px;
   padding: 2em 0.5em;
   z-index: 9999;
 
@@ -66,9 +35,75 @@ H1 {font-weight: 900;}
   transition: background-color 0.3s;
 }
 
-.drag-drop.can-drop {
-  color: #000;
-  background-color: #4e4;
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+.dropzone {
+  min-height: 90px;
+  min-width: 200px;
+  padding: 3px;
+}
+
+#upper-row {
+  border: 1px solid black;
+}
+
+#bottom-row {
+  border: 1px solid black;
+}
+
+#keyPartners {
+
+}
+
+#customerSegments {
+
+}
+
+#costStructure {
+  border-right: 1px solid black;
+}
+
+#keyResources {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#keyActivities {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#customerRel {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#channels {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .form-control {

@@ -1,5 +1,5 @@
 {
-  "name": "d-t_meteor",
+  "name": "design-thinking-meteor-react",
   "private": true,
   "scripts": {
     "start": "meteor run"
@@ -7,7 +7,14 @@
   "dependencies": {
     "babel-runtime": "^6.20.0",
     "bcrypt": "^1.0.2",
-    "interact.js": "^1.2.8",
-    "meteor-node-stubs": "~0.2.0"
+    "classnames": "^2.2.5",
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.2.1",
+    "react-dom": "^15.4.2",
+    "react-dragula": "^1.1.17"
+  },
+  "devDependencies": {
+    "eslint": "^3.1.1"
   }
 }
