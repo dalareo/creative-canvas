@@ -6,9 +6,12 @@
       {{> loginButtons}}
 
       {{#if currentUser}}
-        <form class="new-box">
-          <input name="text" type="text" placeholder="Add new boxes typing here + INTRO">
+        <form id="new-box" class="new-box">
+          <p>Create PAD: <a href="http://pad.educaas.io">New Pad</a></p>
+          <p>Pad URL: <input name="url" type="url" placeholder="Add pad URL"></p>
+          <p>Name: <input name="text" type="text" placeholder="Add new boxes typing here + INTRO"></p>
         </form>
+        <button type="submit" form="new-box" value="submit">Create</button>
       {{/if}}
     </header>
     <div id="backlog">
@@ -19,6 +22,7 @@
 
     <!-- Canvas -->
     <table id="bizcanvas" cellspacing="0" border="1">
+
       <!-- Upper part -->
       <tr>
         <td class="dropzone" colspan="2" rowspan="2">

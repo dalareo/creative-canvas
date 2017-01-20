@@ -20,11 +20,13 @@ Template.body.events({
     // Get value from form element
     const target = event.target;
     const text = target.text.value;
+    const url = target.url.value;
 
     // Insert a box into the collection
-    Meteor.call('boxes.insert', text);
+    Meteor.call('boxes.insert', text, url);
 
     // Clear form
     target.text.value = '';
+    target.url.value = '';
   },
 });

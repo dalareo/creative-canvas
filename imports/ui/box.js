@@ -10,14 +10,13 @@ Template.box.events({
 
     // Get value from form element
     const target = event.target;
-    //const text = target.firstChild;
-    const dataX = target.getAttribute('data-x');
-    const dataY = target.getAttribute('data-y');
+    const x = target.getAttribute('data-x');
+    const y = target.getAttribute('data-y');
 
-    // console.log( text );
+    //console.log( text, this._id, dataX, dataY );
 
     // Update box position
-    Meteor.call('boxes.update', this._id, dataX, dataY);
+    Meteor.call('boxes.update', this._id, x, y);
   },
 
   'click .close'() {
