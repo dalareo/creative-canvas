@@ -1,9 +1,13 @@
-<body>
+<template name="Home">
+  {{> Nav}}
+
+</template>
+
+<template name="businessCanvas">
+  {{> Nav}}
   <div class="container" id="canvas">
     <header>
       <h1>Business Model Canvas</h1>
-
-      {{> loginButtons}}
 
       {{#if currentUser}}
         <form id="new-box" class="new-box">
@@ -70,4 +74,9 @@
     </table>
     <!-- /Canvas -->
   </div>
-</body>
+</template>
+
+<template name="another">
+  {{> Nav}}
+
+</template>

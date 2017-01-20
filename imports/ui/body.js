@@ -6,13 +6,13 @@ import { Boxes } from '../api/boxes.js';
 import './box.js';
 import './body.html';
 
-Template.body.helpers({
+Template.businessCanvas.helpers({
   boxes() {
     return Boxes.find({});
   },
 });
 
-Template.body.events({
+Template.businessCanvas.events({
   'submit .new-box'(event) {
     // Prevent default browser form submit
     event.preventDefault()
