@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Business Model Canvas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/canvas.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container" id="canvas">
+    <form method="post">
+      <input type="button" class="btn btn-default createBox" value="Create box" onclick="creatediv()">
+      <input id="text" type="text" class="form-control" placeholder="Text inside the box">
+    </form>
+    <div id="backlog"></div>
+    <div class="draggable drag-drop">
+      <p>I am draggable</p>
+    </div>
+
+    <!-- Canvas -->
+    <table id="bizcanvas" cellspacing="0" border="1">
+      <!-- Upper part -->
+      <tr>
+        <td class="dropzone" colspan="2" rowspan="2">
+          <h4>Key Partners</h4>
+        </td>
+        <td class="dropzone" colspan="2">
+          <h4>Key Activities</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2" rowspan="2">
+          <h4>Value Proposition</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2">
+          <h4>Customer Relationship</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2" rowspan="2">
+          <h4>Customer Segments</h4>
+          <p>...</p>
+        </td>
+      </tr>
+
+      <!-- Lower part -->
+      <tr>
+        <td class="dropzone" colspan="2">
+          <h4>Key Resources</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="2">
+          <h4>Channels</h4>
+          <p>...</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="dropzone" colspan="5">
+          <h4>Cost Structure</h4>
+          <p>...</p>
+        </td>
+        <td class="dropzone" colspan="5">
+          <h4>Revenue Streams</h4>
+          <p>...</p>
+        </td>
+      </tr>
+    </table>
+    <!-- /Canvas -->
+  </div>
+  <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/interact.min.js"></script>
+  <script src="js/index.js"></script>
+
+  <script language="Javascript">
+    var i=1;
+    function creatediv()
+      {
+        mNewObj = document.createElement('div');
+        mNewObj.className = "draggable drag-drop";
+        mNewObj.id = "BOX" + i;
+        mNewObj.style.visibility="show";
+        mNewObj.innerText = document.getElementById("text").value;
+        var input = document.createElement("button");
+        input.type = "button";
+        input.className = "removebox close";
+        input.innerText = "x"
+        mNewObj.appendChild(input);
+        document.getElementById("backlog").appendChild(mNewObj);
+        mNewObj.setAttribute("data-x", 0);
+        mNewObj.setAttribute("data-y", 0);
+        document.getElementById("text").value = "";
+        i++;
+      }
+
+    $(document).on('click', '.removebox', function () {
+      $(this).parent().remove();
+    });
+    </script>
+</body>
+</html>

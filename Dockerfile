@@ -1,1 +1,2 @@
-FROM abernix/meteord:onbuild
+FROM nginx
+COPY . /usr/share/nginx/html
