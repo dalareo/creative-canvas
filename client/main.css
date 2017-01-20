@@ -30,7 +30,7 @@ H1 {font-weight: 900;}
 }
 
 #backlog {
-  height: 120px;
+  height: 100px;
 }
 .dropzone {
   background-color: #ccc;
@@ -52,7 +52,8 @@ H1 {font-weight: 900;}
 
 .drag-drop {
   display: inline-block;
-  width: 200px;
+  width: 120px;
+  height: 100px;
   padding: 2em 0.5em;
   z-index: 9999;
 

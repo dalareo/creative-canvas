@@ -6,7 +6,7 @@ import { Boxes } from '../api/boxes.js';
 import './box.html';
 
 Template.box.events({
-  'mouseup .draggable'(event) {
+  'mouseleave .draggable'(event) {
 
     // Get value from form element
     const target = event.target;
