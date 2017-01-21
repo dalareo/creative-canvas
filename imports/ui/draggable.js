@@ -18,7 +18,6 @@ interact('.draggable')
 
     // call this function on every dragmove event
     onmove: dragMoveListener,
-    // call this function on every dragend event
   });
 
   function dragMoveListener (event) {
