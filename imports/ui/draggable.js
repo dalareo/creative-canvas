@@ -1,4 +1,5 @@
 import interact from 'interact.js';
+import { Boxes } from '../api/boxes.js';
 
 // target elements with the "draggable" class
 interact('.draggable')
@@ -67,7 +68,7 @@ interact('.draggable')
 
     },
     ondrop: function (event) {
-
+      //console.log(Boxes.findOne({'dataX: event.relatedTarget.getAttribute('data-x')'}, {fields: {'dataX': 1}}).dataX);
     },
     ondropdeactivate: function (event) {
       // remove active dropzone feedback
