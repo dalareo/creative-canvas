@@ -4,6 +4,13 @@ import { check } from 'meteor/check'
 
 export const Boxes = new Mongo.Collection('boxes');
 
+if (Meteor.isServer) {
+  // This code only runs on the server
+  Meteor.publish('boxes', function boxesPublication() {
+    return Boxes.find();
+  });
+}
+
 Meteor.methods({
   'boxes.update'(boxId, xValue, yValue) {
     check(boxId, String);

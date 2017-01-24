@@ -6,9 +6,13 @@ import { Boxes } from '../api/boxes.js';
 import './box.js';
 import './body.html';
 
+Template.businessCanvas.onCreated(function businessCanvasOnCreated() {
+  Meteor.subscribe('boxes');
+});
+
 Template.businessCanvas.helpers({
   boxes() {
-    return Boxes.find({});
+    return Boxes.find();
   },
 });
 

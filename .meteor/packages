@@ -17,10 +17,11 @@ standard-minifier-js@1.2.1    # JS minifier run for production mode
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.6.1              # Enable ECMAScript2015+ syntax in app code
 
-autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 mizzao:bootstrap-3
 shell-server
 stylus
 ian:accounts-ui-bootstrap-3
 accounts-password
 iron:router
+msavin:mongol
+reactive-dict

@@ -5,6 +5,7 @@ import { Boxes } from '../api/boxes.js';
 
 import './box.html';
 
+
 Template.box.events({
   'mouseleave .draggable'(event) {
 
