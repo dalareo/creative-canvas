@@ -8,12 +8,17 @@ import './body.html';
 
 Template.businessCanvas.onCreated(function businessCanvasOnCreated() {
   Meteor.subscribe('boxes');
+
 });
 
 Template.businessCanvas.helpers({
   boxes() {
     return Boxes.find();
   },
+});
+
+Template.businessCanvas.onRendered( function () {
+    document.getElementById('bizcanvas').className = 'businessmodelcanvas';
 });
 
 Template.businessCanvas.events({
