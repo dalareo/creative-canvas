@@ -1,13 +1,23 @@
 /* CSS declarations go here */
 H1 {font-weight: 900;}
 
+header {
+  margin: 15px;
+}
+
 #bizcanvas {
   border: 3px solid black;
   height: 600px;
   width: 800px;
+}
+
+.businessmodelcanvas {
   background-image: url('https://www.sketchappsources.com/resources/source-image/stratgyzer-business-model-canvas.jpg');
 }
 
+.empathymapping {
+  background-image: url('http://www.designorate.com/wp-content/uploads/2015/08/persona-empathy-map.jpg');
+}
 #bizcanvas p {
   font-weight: 300;
   font-size: 0.8em;

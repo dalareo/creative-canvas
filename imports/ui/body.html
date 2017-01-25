@@ -10,6 +10,14 @@
       <h1>Business Model Canvas</h1>
 
       {{#if currentUser}}
+        <div class="form-group">
+          <label for="templateSelect">Template select</label>
+          <select class="form-control" id="templateSelect">
+              <option value="businessmodelcanvas">Business Model Canvas</option>
+              <option value="empathymapping">Empathy Mapping</option>
+              <option value="empty">Empty</option>
+            </select>
+        </div>
         <form id="new-box" class="new-box">
           <p>Create PAD: <a target="_blank" href="http://pad.educaas.io">New Pad</a></p>
           <p>Pad URL: <input name="url" type="url" placeholder="Add pad URL"></p>

@@ -17,6 +17,10 @@ Template.businessCanvas.helpers({
 });
 
 Template.businessCanvas.events({
+  'change #templateSelect': function (event) {
+    document.getElementById('bizcanvas').className = "";
+    document.getElementById('bizcanvas').className = event.target.value;
+  },
   'submit .new-box'(event) {
     // Prevent default browser form submit
     event.preventDefault()
