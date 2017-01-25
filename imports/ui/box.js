@@ -23,7 +23,9 @@ Template.box.onRendered(function (event) {
 });
 
 Template.box.events({
-  'mouseleave .draggable'(event) {
+
+  'mouseup .draggable, touchend .draggable'(event) {
+    //console.log(this, Template.currentData());
 
     // Get value from form element
     const target = event.target;

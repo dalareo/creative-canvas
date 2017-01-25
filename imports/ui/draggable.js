@@ -19,6 +19,10 @@ interact('.draggable')
 
     // call this function on every dragmove event
     onmove: dragMoveListener,
+
+    onend: function (event) {
+      //console.log(event.target);
+    }
   });
 
   function dragMoveListener (event) {
@@ -41,7 +45,8 @@ interact('.draggable')
   window.dragMoveListener = dragMoveListener;
 
   // enable draggables to be dropped into this
-  interact('.dropzone').dropzone({
+  interact('.dropzone')
+  .dropzone({
     // only accept elements matching this CSS selector
     accept: '.draggable',
     // Require a 75% element overlap for a drop to be possible

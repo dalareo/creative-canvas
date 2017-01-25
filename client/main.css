@@ -76,6 +76,14 @@ H1 {font-weight: 900;}
   width: 200px !important;
 }
 
+.pad {
+  margin-bottom: 1px;
+  margin-right: 2px;
+  position:absolute;
+  bottom:0;
+  right: 0;
+}
+
 .removebox {
   margin-top: 1px;
   margin-right: 2px;
