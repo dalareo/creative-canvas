@@ -8,7 +8,6 @@ import './body.html';
 
 Template.businessCanvas.onCreated(function businessCanvasOnCreated() {
   Meteor.subscribe('boxes');
-
 });
 
 Template.businessCanvas.helpers({
@@ -23,8 +22,13 @@ Template.businessCanvas.onRendered( function () {
 
 Template.businessCanvas.events({
   'change #templateSelect': function (event) {
+    const e = event.target;
+
     document.getElementById('bizcanvas').className = "";
-    document.getElementById('bizcanvas').className = event.target.value;
+    document.getElementById('templateName').innerHTML = "";
+
+    document.getElementById('bizcanvas').className = e.value;
+    document.getElementById('templateName').innerHTML = e.options[e.selectedIndex].text;
   },
   'submit .new-box'(event) {
     // Prevent default browser form submit

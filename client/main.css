@@ -13,11 +13,14 @@ header {
 
 .businessmodelcanvas {
   background-image: url('https://www.sketchappsources.com/resources/source-image/stratgyzer-business-model-canvas.jpg');
+  background-size: 100%;
 }
 
 .empathymapping {
   background-image: url('http://www.designorate.com/wp-content/uploads/2015/08/persona-empathy-map.jpg');
+  background-size: 100%;
 }
+
 #bizcanvas p {
   font-weight: 300;
   font-size: 0.8em;
