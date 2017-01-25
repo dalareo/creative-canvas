@@ -3,25 +3,9 @@ H1 {font-weight: 900;}
 
 #bizcanvas {
   border: 3px solid black;
-  width: 100%;
-}
-
-#bizcanvas td {
-  vertical-align: top;
-  height: 200px;
-  width: 200px;
-  padding: 6px;
-}
-
-
-#bizcanvas H4 {
-  font-weight: 700;
-  font-size: 1em;
-}
-
-#bizcanvas H5 {
-  font-weight: 700;
-  font-size: 0.7em;
+  height: 600px;
+  width: 800px;
+  background-image: url('https://www.sketchappsources.com/resources/source-image/stratgyzer-business-model-canvas.jpg');
 }
 
 #bizcanvas p {
@@ -29,9 +13,6 @@ H1 {font-weight: 900;}
   font-size: 0.8em;
 }
 
-#backlog {
-  height: 100px;
-}
 .dropzone {
   background-color: #ccc;
   margin: 10px auto 30px;
