@@ -1,8 +1,17 @@
+
 /* CSS declarations go here */
 H1 {font-weight: 900;}
 
 header {
   margin: 15px;
+}
+
+#login-sign-in-link {
+  color: white;
+}
+
+#login-name-link {
+  color: white;
 }
 
 #bizcanvas {
@@ -44,6 +53,10 @@ header {
   border-style: solid;
 }
 
+.pad a {
+  color: white;
+}
+
 .drag-drop {
   display: inline-block;
   width: 120px;
@@ -52,7 +65,7 @@ header {
   z-index: 9999;
 
   color: #fff;
-  background-color: #29e;
+  background-color: #e99002;
   border: solid 2px #fff;
 
   -webkit-transform: translate(0px, 0px);
