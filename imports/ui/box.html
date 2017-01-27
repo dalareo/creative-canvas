@@ -1,7 +1,9 @@
 <template name="box">
-  <div class="draggable drag-drop" data-y="{{dataY}}" data-x="{{dataX}}">
-    <p>{{text}}</p>
-    <p class="pad"><a target="_blank" href="{{pad_url}}">Pad</a></p>
-    <button type="button" class="removebox close">&times;</button>
-  </div>
+
+    <div class="draggable drag-drop" data-y="{{dataY}}" data-x="{{dataX}}" style="transform: translate({{dataX}}px, {{dataY}}px);">
+      <p>{{text}}</p>
+      <p class="pad"><a target="_blank" href="{{pad_url}}">Pad</a></p>
+      <button type="button" class="removebox close">&times;</button>
+    </div>
+
 </template>
