@@ -16,6 +16,8 @@ Template.businessCanvas.helpers({
   },
 });
 
+// Set initial Template to Business Model Canvas
+
 Template.businessCanvas.onRendered( function () {
     document.getElementById('bizcanvas').className = 'businessmodelcanvas';
 });
