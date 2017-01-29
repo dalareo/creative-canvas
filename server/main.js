@@ -8,10 +8,10 @@ Router.route('/', function () {
 });
 
 // when you navigate to "/one" automatically render the template named "One".
-Router.route('/business-canvas');
+Router.route('/canvas');
 
 // when you navigate to "/two" automatically render the template named "Two".
-Router.route('/another');
+Router.route('/help');
 
 Meteor.startup(() => {
   // code to run on server at startup

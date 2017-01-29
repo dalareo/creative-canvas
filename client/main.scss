@@ -1,9 +1,23 @@
 
 /* CSS declarations go here */
-H1 {font-weight: 900;}
+body {
+  font-size: 15px !important;
+}
+
+H1 {
+  font-weight: 900;
+}
 
 header {
   margin: 15px;
+}
+
+.nav li a {
+  text-transform: uppercase;
+}
+
+.well {
+  margin: 5px;
 }
 
 #login-sign-in-link {

@@ -6,11 +6,11 @@ import { Boxes } from '../api/boxes.js';
 import './box.js';
 import './body.html';
 
-Template.businessCanvas.onCreated(function businessCanvasOnCreated() {
+Template.canvas.onCreated(function canvasOnCreated() {
   Meteor.subscribe('boxes');
 });
 
-Template.businessCanvas.helpers({
+Template.canvas.helpers({
   boxes() {
     return Boxes.find();
   },
@@ -18,11 +18,11 @@ Template.businessCanvas.helpers({
 
 // Set initial Template to Business Model Canvas
 
-Template.businessCanvas.onRendered( function () {
+Template.canvas.onRendered( function () {
     document.getElementById('bizcanvas').className = 'businessmodelcanvas';
 });
 
-Template.businessCanvas.events({
+Template.canvas.events({
   'change #templateSelect': function (event) {
     const e = event.target;
 
