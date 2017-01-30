@@ -27,19 +27,18 @@ Template.box.events({
 
   'mouseup .draggable, touchend .draggable'(event) {
     //console.log(this, Template.currentData());
+    //console.log( event.target.parentElement.getAttribute('data-x') );
 
     // Get value from form element
-    const target = event.target;
+    const target = event.target.parentElement;
     const x = target.getAttribute('data-x');
     const y = target.getAttribute('data-y');
-
-    //console.log( text, this._id, dataX, dataY );
 
     // Update box position
     Meteor.call('boxes.update', this._id, x, y);
   },
 
-  'click .close'() {
+  'click .removebox'() {
     Meteor.call('boxes.remove', this._id);
   },
 });

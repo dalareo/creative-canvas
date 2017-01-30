@@ -19,14 +19,14 @@ Template.canvas.helpers({
 // Set initial Template to Business Model Canvas
 
 Template.canvas.onRendered( function () {
-    document.getElementById('bizcanvas').className = 'businessmodelcanvas';
+  document.getElementById('bizcanvas').className = 'businessmodelcanvas';
 });
 
 Template.canvas.events({
   'change #templateSelect': function (event) {
     const e = event.target;
 
-    document.getElementById('bizcanvas').className = "";
+    document.getElementById('bizcanvas').className = '';
     document.getElementById('templateName').innerHTML = "";
 
     document.getElementById('bizcanvas').className = e.value;
@@ -40,9 +40,10 @@ Template.canvas.events({
     const target = event.target;
     const text = target.text.value;
     const url = target.url.value;
+    const color = target.colorSelect.options[target.colorSelect.selectedIndex].value;
 
     // Insert a box into the collection
-    Meteor.call('boxes.insert', text, url);
+    Meteor.call('boxes.insert', text, url, color);
 
     // Clear form
     target.text.value = '';

@@ -1,9 +1,10 @@
 <template name="box">
 
-    <div class="draggable drag-drop" data-y="{{dataY}}" data-x="{{dataX}}" style="transform: translate({{dataX}}px, {{dataY}}px);">
+    <div class="draggable drag-drop {{color}}" data-y="{{dataY}}" data-x="{{dataX}}" style="transform: translate({{dataX}}px, {{dataY}}px);">
+      <div class="handle glyphicon glyphicon-move"></div>
       <p>{{text}}</p>
       <p class="pad"><a target="_blank" href="{{pad_url}}">Pad</a></p>
-      <button type="button" class="removebox close">&times;</button>
+      <button type="button" class="removebox close glyphicon glyphicon-remove"></button>
     </div>
 
 </template>

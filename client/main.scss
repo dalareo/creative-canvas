@@ -67,8 +67,16 @@ header {
   border-style: solid;
 }
 
-.pad a {
-  color: white;
+.yellow {
+  background-color: #FFFF00;
+}
+
+.green {
+  background-color: #00FF00;
+}
+
+.blue {
+  background-color: #00FFFF;
 }
 
 .drag-drop {
@@ -79,8 +87,8 @@ header {
   z-index: 9999;
   position: absolute;
 
-  color: #fff;
-  background-color: #e99002;
+  color: #000000;
+  //background-color: #e99002;
   border: solid 2px #fff;
 
   -webkit-transform: translate(0px, 0px);
@@ -98,6 +106,15 @@ header {
   width: 200px !important;
 }
 
+.handle {
+  font-size: 18px !important;
+  margin-top: 1px;
+  margin-left: 2px;
+  position:absolute !important;
+  top:0 !important;
+  left:0;
+}
+
 .pad {
   margin-bottom: 1px;
   margin-right: 2px;
@@ -106,10 +123,15 @@ header {
   right: 0;
 }
 
+.pad a{
+  color: #000000;
+}
+
 .removebox {
+  font-size: 18px !important;
   margin-top: 1px;
   margin-right: 2px;
-  position:absolute;
+  position: absolute !important;
   top:0;
   right:0;
 }

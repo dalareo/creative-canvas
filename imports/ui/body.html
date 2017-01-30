@@ -43,20 +43,27 @@
     <div class="row">
       <div class="col-md-4">
       {{#if currentUser}}
-        <div class="form-group">
+        <div class="well">
           <label for="templateSelect">Template select</label>
           <select class="form-control" id="templateSelect">
               <option value="businessmodelcanvas">Business Model Canvas</option>
               <option value="empathymapping">Empathy Mapping</option>
               <option value="empty">Empty</option>
-            </select>
+          </select>
         </div>
-        <form id="new-box" class="new-box">
+        <form id="newBox" class="well new-box">
           <p>Create PAD: <a target="_blank" href="http://pad.educaas.io">New Pad</a></p>
           <p>Pad URL: <input name="url" type="url" placeholder="Add pad URL"></p>
-          <p>Name: <input name="text" type="text" placeholder="Add element title"></p>
+          <p><textarea name="text" rows=2 maxlength="40" placeholder="Add a brief description"></textarea></p>
+          <label for="colorSelect">Color</label>
+          <select class="form-control" id="colorSelect">
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+          </select>
+
         </form>
-        <button class="btn btn-primary btn-lg" type="submit" form="new-box" value="submit">Create</button>
+        <button class="btn btn-primary btn-lg" type="submit" form="newBox" value="submit">Create</button>
       {{/if}}
       </div>
 
@@ -96,7 +103,9 @@
       </div><div class="col-md-4">
         <div class="well">
           <div class="h3">Creating and editing notes</div>
-          <p>Creating notes is as simple as filling the form. You can choose a title for your note/idea and also a PAD to develop your idea and include images or links to other projects.</p>
+          <p>Creating notes is as simple as filling the form. You can choose a <b>brief description</b> for your note/idea and also a <b>PAD</b> to develop your idea and include images or links to other projects.</p>
+          <p>You can also choose the <b>color</b> of your note to categorize ideas!</p>
+          <p>Notes can be dragged and dropped clicking in the upper left corner.</p>
         </div>
       </div>
       <div class="col-md-4">

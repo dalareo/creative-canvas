@@ -29,9 +29,10 @@ Meteor.methods({
   });
   },
 
-  'boxes.insert'(text, pad_url) {
+  'boxes.insert'(text, pad_url, color) {
     check(text, String);
     check(pad_url, String);
+    check(color, String);
 
     // Make sure the user is logged in before inserting a task
     if (! this.userId) {
@@ -41,6 +42,7 @@ Meteor.methods({
     Boxes.insert({
       text,
       pad_url,
+      color,
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username,

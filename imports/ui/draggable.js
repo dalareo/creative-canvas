@@ -10,7 +10,7 @@ interact('.draggable')
     refreshPositions: true,
     // keep the element within the area of it's parent
     restrict: {
-      restriction: "#canvas",
+      restriction: ".bizcanvas",
       endOnly: true,
       elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
     },
@@ -23,7 +23,8 @@ interact('.draggable')
     onend: function (event) {
       //console.log(event.target);
     }
-  });
+  })
+  .allowFrom('.handle');
 
   function dragMoveListener (event) {
     var target = event.target,
