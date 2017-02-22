@@ -1,4 +1,4 @@
-# Design-Thinking App
+# Creative-Canvas App
 
 This app is included in [EduCaaS](http://educaas.io) official catalog and can be deployed using our platform.
 
