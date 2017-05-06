@@ -1,2 +1,2 @@
 # Dockerfile
-FROM abernix/meteord:onbuild
+FROM aedm/minimeteor
