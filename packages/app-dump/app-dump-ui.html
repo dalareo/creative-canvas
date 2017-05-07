@@ -1,0 +1,66 @@
+<template name="appDumpUI">
+  <div class="row hitchcott-app-dump">
+    <div class="col-sm-12">
+      {{> appDumpUpload}}
+      <hr>
+      {{> appDumpDownload}}
+    </div>
+  </div>
+</template>
+
+<template name="appDumpUpload">
+  <form enctype="multipart/form-data">
+    <input type="hidden" value="{{downloadToken}}" name="token">
+    {{#if advanced}}
+      <div class="form-group">
+        <label>
+          <input type="checkbox" value="drop" name="drop" checked='checked'>
+          Drop Existing Data?
+        </label>
+      </div>
+    {{else}}
+      <input type="hidden" value="true" name="drop">
+    {{/if}}
+    <div class="form-group">
+      {{#if uploading}}
+        <p>Uploading...</p>
+      {{else}}
+      <span class="btn btn-success btn-file">
+        <input type="file" class='app-dump-upload' name='appDumpUpload' accept=".tar"> Load Canvas
+      </span>
+      {{/if}}
+    </div>
+  </form>
+</template>
+
+<template name="appDumpDownload">
+  <form>
+    {{#if advanced}}
+      <div class="form-group">
+        <label>Canvas name</label>
+        <input type="text" class='form-control' name="filename" placeholder="e.g. my_canvas">
+      </div>
+
+      <div class="form-group" style="display: none">
+        <label>Collections <span class='text-muted'>comma seperated list of collection names</span></label>
+        <input type="text" class='form-control' name="collections" placeholder="e.g. Users, Posts, Comments">
+      </div>
+      <div class="form-group" style="display: none">
+        <label>Query <span class='text-muted'>mongo find selector in JSON format</span></label>
+        <input type="text" name="query" placeholder='e.g. {"deleted": {"$ne": true}}' class='form-control'>
+      </div>
+      <div class="form-group" style="display: none">
+        <label>Parser <span class='text-muted'>output format</span></label>
+        <select name="parser" class="form-control">
+          <option value="bson">BSON - Default</option>
+          <option value="json">JSON - Cannot restore, human readable</option>
+        </select>
+      </div>
+    {{/if}}
+    <input type="hidden" value="{{downloadToken}}" id="token" name="token">
+    <div class="form-group">
+      <a class='app-dump-download btn btn-primary' href="#">Save Canvas</a>
+    </div>
+  </form>
+</template>
+
