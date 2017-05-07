@@ -12,12 +12,12 @@
   <form enctype="multipart/form-data">
     <input type="hidden" value="{{downloadToken}}" name="token">
     {{#if advanced}}
-      <div class="form-group">
+    <!--<div class="form-group">
         <label>
-          <input type="checkbox" style="display: none" value="drop" name="drop">
-          Drop Existing Data?
+          <input type="checkbox" style="display: none" value="drop" name="drop" checked >
+	  Drop Existing Data?
         </label>
-      </div>
+    </div>-->
     {{else}}
       <input type="hidden" value="true" name="drop">
     {{/if}}
