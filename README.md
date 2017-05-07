@@ -41,6 +41,7 @@ Notes can be dragged and dropped, added or removed by any user and all the users
 - Meteor app with MongoDB
 - Added reactivity to notes
 - Selector added. You can choose from different templates
+- Added saving/loading feature
 
 ## Credits
 
