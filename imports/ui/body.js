@@ -49,4 +49,7 @@ Template.canvas.events({
     target.text.value = '';
     target.url.value = '';
   },
+  'click .clear-canvas'(event) {
+    Meteor.call('removeAllBoxes');
+  }
 });

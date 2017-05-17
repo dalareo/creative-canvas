@@ -58,4 +58,7 @@ Meteor.methods({
 
     Boxes.remove(boxId);
   },
+  removeAllBoxes: function() {
+    return Boxes.remove({});
+  }
 });
