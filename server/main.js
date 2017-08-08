@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
 import '../imports/api/boxes.js';
+import '../imports/api/backgrounds.js';
 
 Router.route('/', function () {
   // render the Home template with a custom data context

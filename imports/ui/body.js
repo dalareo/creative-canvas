@@ -2,24 +2,24 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
 import { Boxes } from '../api/boxes.js';
+import { Backgrounds } from '../api/backgrounds.js';
 
 import './box.js';
 import './body.html';
+import './background.html';
 
 Template.canvas.onCreated(function canvasOnCreated() {
   Meteor.subscribe('boxes');
+  Meteor.subscribe('backgrounds');
 });
 
 Template.canvas.helpers({
   boxes() {
     return Boxes.find();
   },
-});
-
-// Set initial Template to Business Model Canvas
-
-Template.canvas.onRendered( function () {
-  document.getElementById('bizcanvas').className = 'businessmodelcanvas';
+  backgrounds() {
+    return Backgrounds.find();
+  },
 });
 
 Template.canvas.events({
@@ -27,7 +27,15 @@ Template.canvas.events({
     event.preventDefault()
 
     const i = event.target;
-    document.getElementById('bizcanvas').style.backgroundImage = 'url('+ i.imageUrl.value +')';
+    const url = i.imageUrl.value;
+
+    // document.getElementById('bizcanvas').style.backgroundImage = 'url('+ i.imageUrl.value +')';
+
+    // Set template background URL
+    Meteor.call('backgrounds.insert', url);
+
+    // Clear form
+    i.imageUrl.value = '';
   },
   'submit .new-box'(event) {
     // Prevent default browser form submit
@@ -48,5 +56,6 @@ Template.canvas.events({
   },
   'click .clear-canvas'(event) {
     Meteor.call('removeAllBoxes');
+    Meteor.call('removeBackgrounds');
   }
 });

@@ -31,27 +31,15 @@ header {
   background-size: 100%;
 }
 
+.bizcanvas {
+  background-size: 100%;
+  height: 600px;
+  width: 800;
+}
+
 #bizcanvas p {
   font-weight: 300;
   font-size: 0.8em;
-}
-
-.dropzone {
-  background-color: #ccc;
-  margin: 10px auto 30px;
-  padding: 10px;
-  width: 80%;
-  transition: background-color 0.3s;
-}
-
-.drop-active {
-  border-color: #aaa;
-}
-
-.drop-target {
-  background-color: #29e;
-  border-color: #fff;
-  border-style: solid;
 }
 
 .yellow {

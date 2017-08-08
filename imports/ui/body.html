@@ -45,8 +45,8 @@
       {{#if currentUser}}
         <div class="well">
           {{> appDumpUI advanced=true }}
-        </div>   
-          
+        </div>
+
         <div class="well">
           <label for="setBackground">Template select</label>
           <form id="setBackground">
@@ -71,12 +71,16 @@
 
       <!-- Canvas -->
       <div class="col-md-8">
-        <div id="bizcanvas" >
-          {{#each boxes}}
-            {{> box }}
+          <div id="bizcanvas">
+            {{#each boxes }}
+                {{> box }}
             {{/each}}
-        </div>
-        {{#if currentUser}}<button class="btn btn-danger btn-md clear-canvas">Clear canvas</button>{{/if}}
+            {{#each backgrounds }}
+              {{> background }}
+            {{/each}}
+
+            {{#if currentUser}}<button class="btn btn-danger btn-md clear-canvas">Clear canvas</button>{{/if}}
+          </div>
       </div>
       <!-- /Canvas -->
 
