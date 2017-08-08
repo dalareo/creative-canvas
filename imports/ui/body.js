@@ -23,15 +23,6 @@ Template.canvas.onRendered( function () {
 });
 
 Template.canvas.events({
-  //'change #templateSelect': function (event) {
-  //  const e = event.target;
-
-  //  document.getElementById('bizcanvas').className = '';
-  //  document.getElementById('templateName').innerHTML = "";
-
-  //  document.getElementById('bizcanvas').className = e.value;
-  //  document.getElementById('templateName').innerHTML = e.options[e.selectedIndex].text;
-  //},
   'submit #setBackground': function (event) {
     event.preventDefault()
 
