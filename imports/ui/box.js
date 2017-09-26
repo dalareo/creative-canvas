@@ -5,29 +5,9 @@ import { Boxes } from '../api/boxes.js';
 
 import './box.html';
 
-//Unnecesary as long as {{dataX}} and {{dataY}} are now reactive
-  //Template.box.onRendered(function (event) {
-  // refresh boxes positions
-  //var target = this.firstNode,
-      // keep the dragged position in the data-x/data-y attributes
-      //x = target.getAttribute('data-x');
-      //y = target.getAttribute('data-y');
-
-  // translate the element
-  //target.style.webkitTransform =
-  //target.style.transform =
-    //'translate(' + x + 'px, ' + y + 'px)';
-
-  // update the posiion attributes
-  //target.setAttribute('data-x', x);
-  //target.setAttribute('data-y', y);
-//});
-
 Template.box.events({
 
   'mouseup .draggable, touchend .draggable'(event) {
-    //console.log(this, Template.currentData());
-    //console.log( event.target.parentElement.getAttribute('data-x') );
 
     // Get value from form element
     const target = event.target.parentElement;

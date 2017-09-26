@@ -29,8 +29,6 @@ Template.canvas.events({
     const i = event.target;
     const url = i.imageUrl.value;
 
-    // document.getElementById('bizcanvas').style.backgroundImage = 'url('+ i.imageUrl.value +')';
-
     // Set template background URL
     Meteor.call('backgrounds.insert', url);
 
